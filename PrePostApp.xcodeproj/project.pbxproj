@@ -7,48 +7,142 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FC79FD55FBA159538F005E3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D02051911F7FE51C9675686 /* libPods.a */; };
+		241FDC071CE1FFC200225EDE /* PPSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241FDC061CE1FFC200225EDE /* PPSettingsViewController.swift */; };
+		241FDC091CE203D100225EDE /* PPUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241FDC081CE203D100225EDE /* PPUserDefaults.swift */; };
+		242D91441CD21CBE00606576 /* PPScheduleCreatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D91431CD21CBE00606576 /* PPScheduleCreatorController.swift */; };
+		242D91491CD2252B00606576 /* PPScheduleDataSourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D91481CD2252B00606576 /* PPScheduleDataSourceModel.swift */; };
+		242D914E1CD22C0F00606576 /* IPPSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D914D1CD22C0F00606576 /* IPPSchedule.swift */; };
+		242D91531CD2697A00606576 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D91521CD2697A00606576 /* MainViewController.swift */; };
+		242D91561CD26A9C00606576 /* Schedule.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 242D91541CD26A9C00606576 /* Schedule.xcdatamodeld */; };
+		242D915C1CD26CDA00606576 /* PPScheduleCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D915B1CD26CDA00606576 /* PPScheduleCreator.swift */; };
+		242D915E1CD26EEE00606576 /* ScheduleDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D915D1CD26EEE00606576 /* ScheduleDatabaseManager.swift */; };
+		242D91621CD2707700606576 /* PPScheduleEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D91611CD2707700606576 /* PPScheduleEditViewController.swift */; };
+		242D91671CD270BE00606576 /* AddDatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D91631CD270BE00606576 /* AddDatePickerTableViewCell.swift */; };
+		242D91681CD270BE00606576 /* AddSegmentedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D91641CD270BE00606576 /* AddSegmentedTableViewCell.swift */; };
+		242D91691CD270BE00606576 /* AddTextInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D91651CD270BE00606576 /* AddTextInputTableViewCell.swift */; };
+		242D916A1CD270BE00606576 /* ScheduleSimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D91661CD270BE00606576 /* ScheduleSimpleTableViewCell.swift */; };
+		243DB0831CE56BA6007ACE1F /* IPPScheduleControlSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243DB0821CE56BA6007ACE1F /* IPPScheduleControlSource.swift */; };
+		243DB0851CE57C61007ACE1F /* PPScheduleEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243DB0841CE57C61007ACE1F /* PPScheduleEditController.swift */; };
+		2457086A1CF47BF700582CDE /* PPForceUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245708691CF47BF700582CDE /* PPForceUpdateViewController.swift */; };
+		245917B91CE30A860049FE93 /* PPSettingsSwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245917B81CE30A860049FE93 /* PPSettingsSwitchTableViewCell.swift */; };
+		245917BB1CE310270049FE93 /* IPPSettingDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245917BA1CE310270049FE93 /* IPPSettingDetailCell.swift */; };
+		24597FB51D137A38001FB93B /* PPHTTPReqeustController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24597FB41D137A38001FB93B /* PPHTTPReqeustController.swift */; };
 		246B40A21CC556CD00394CF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246B40A11CC556CD00394CF3 /* AppDelegate.swift */; };
-		246B40A41CC556CD00394CF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246B40A31CC556CD00394CF3 /* ViewController.swift */; };
 		246B40A71CC556CD00394CF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246B40A51CC556CD00394CF3 /* Main.storyboard */; };
-		246B40AA1CC556CD00394CF3 /* PrePostApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 246B40A81CC556CD00394CF3 /* PrePostApp.xcdatamodeld */; };
 		246B40AC1CC556CD00394CF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 246B40AB1CC556CD00394CF3 /* Assets.xcassets */; };
 		246B40AF1CC556CD00394CF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246B40AD1CC556CD00394CF3 /* LaunchScreen.storyboard */; };
-		246B40BA1CC556CE00394CF3 /* PrePostAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246B40B91CC556CE00394CF3 /* PrePostAppTests.swift */; };
-		246B40C51CC556CE00394CF3 /* PrePostAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246B40C41CC556CE00394CF3 /* PrePostAppUITests.swift */; };
+		247193B31D0A562D00967481 /* String+Regular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247193B21D0A562D00967481 /* String+Regular.swift */; };
+		248FC7971D191A9C005A8ED5 /* PPAnalyticsSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248FC7961D191A9C005A8ED5 /* PPAnalyticsSender.swift */; };
+		24A164AC1CDC60C0001D6F86 /* PPDateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A164AB1CDC60C0001D6F86 /* PPDateConverter.swift */; };
+		24AB67DD1CE9890C003FC9D8 /* PPPushMessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB67DC1CE9890C003FC9D8 /* PPPushMessageManager.swift */; };
+		24B2B95D1D18CDEC00817025 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24B2B95C1D18CDEC00817025 /* GoogleService-Info.plist */; };
+		24B2C9621CF813D40037CE72 /* PPSettingsCheckMarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B2C9611CF813D40037CE72 /* PPSettingsCheckMarkTableViewCell.swift */; };
+		24B452801D11688C006DC57B /* PPViewControllerMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B4527F1D11688C006DC57B /* PPViewControllerMediator.swift */; };
+		24E04EBC1D17706600B79F62 /* Holiday+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E04EB51D17706600B79F62 /* Holiday+CoreDataProperties.swift */; };
+		24E04EBD1D17706600B79F62 /* Holiday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E04EB61D17706600B79F62 /* Holiday.swift */; };
+		24E04EBE1D17706600B79F62 /* PPPushInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E04EB81D17706600B79F62 /* PPPushInfo+CoreDataProperties.swift */; };
+		24E04EBF1D17706600B79F62 /* PPPushInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E04EB91D17706600B79F62 /* PPPushInfo.swift */; };
+		24E04EC01D17706600B79F62 /* PushObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E04EBA1D17706600B79F62 /* PushObject+CoreDataProperties.swift */; };
+		24E04EC11D17706600B79F62 /* PushObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E04EBB1D17706600B79F62 /* PushObject.swift */; };
+		24E04ECC1D1770D700B79F62 /* Schedule_1_11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E04EC41D1770D700B79F62 /* Schedule_1_11.swift */; };
+		24E04ECD1D1770D700B79F62 /* Schedule_1_11+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E04EC51D1770D700B79F62 /* Schedule_1_11+CoreDataProperties.swift */; };
+		24E04ECE1D1770D700B79F62 /* Schedule_6_1_5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E04EC61D1770D700B79F62 /* Schedule_6_1_5.swift */; };
+		24E04ECF1D1770D700B79F62 /* Schedule_6_1_5+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E04EC71D1770D700B79F62 /* Schedule_6_1_5+CoreDataProperties.swift */; };
+		24E04ED01D1770D700B79F62 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E04EC81D1770D700B79F62 /* Schedule.swift */; };
+		24E04ED11D1770D700B79F62 /* Schedule+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E04EC91D1770D700B79F62 /* Schedule+CoreDataProperties.swift */; };
+		24E04EDB1D17714600B79F62 /* IPPInstalment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E04ED31D17714600B79F62 /* IPPInstalment.swift */; };
+		24E04EDC1D17714600B79F62 /* IPPInstalmentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E04ED41D17714600B79F62 /* IPPInstalmentContainer.swift */; };
+		24E04EDD1D17714600B79F62 /* PPInstalment+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E04ED51D17714600B79F62 /* PPInstalment+CoreDataProperties.swift */; };
+		24E04EDE1D17714600B79F62 /* PPInstalment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E04ED61D17714600B79F62 /* PPInstalment.swift */; };
+		24E04EDF1D17714600B79F62 /* PPInstalmentContainer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E04ED71D17714600B79F62 /* PPInstalmentContainer+CoreDataProperties.swift */; };
+		24E04EE01D17714600B79F62 /* PPInstalmentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E04ED81D17714600B79F62 /* PPInstalmentContainer.swift */; };
+		24E04EE11D17714600B79F62 /* ScheduleDetaileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E04EDA1D17714600B79F62 /* ScheduleDetaileTableViewController.swift */; };
+		24F779AF1CF541D300CAC4B2 /* Holiday.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24F779AD1CF541D300CAC4B2 /* Holiday.xcdatamodeld */; };
+		24F779B11CF5554000CAC4B2 /* HolidayDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F779B01CF5554000CAC4B2 /* HolidayDatabaseManager.swift */; };
+		24F919B91D0FE5E000A1BBD0 /* PPTestContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F919B81D0FE5E000A1BBD0 /* PPTestContext.swift */; };
+		A3CA279D1D16D97800FFB9BB /* btn_add.png in Resources */ = {isa = PBXBuildFile; fileRef = A3CA279B1D16D97800FFB9BB /* btn_add.png */; };
+		A3CA279E1D16D97800FFB9BB /* btn_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3CA279C1D16D97800FFB9BB /* btn_add@2x.png */; };
+		A3CA27A01D16DB6100FFB9BB /* PPThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA279F1D16DB6100FFB9BB /* PPThemeColor.swift */; };
+		A3CA27A21D1847D500FFB9BB /* UISwitch+TableViewCellTracing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA27A11D1847D500FFB9BB /* UISwitch+TableViewCellTracing.swift */; };
+		A3FB7DFA1CDCE7350079AE56 /* PPMoneyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FB7DF91CDCE7350079AE56 /* PPMoneyFormatter.swift */; };
+		A3FB7E031CDE2DDF0079AE56 /* PPDetailPaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FB7E021CDE2DDF0079AE56 /* PPDetailPaymentTableViewCell.swift */; };
+		A3FB7E051CDE31B90079AE56 /* PPDetailContainerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FB7E041CDE31B90079AE56 /* PPDetailContainerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		246B40B61CC556CE00394CF3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 246B40961CC556CD00394CF3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 246B409D1CC556CD00394CF3;
-			remoteInfo = PrePostApp;
-		};
-		246B40C11CC556CE00394CF3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 246B40961CC556CD00394CF3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 246B409D1CC556CD00394CF3;
-			remoteInfo = PrePostApp;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		241FDC061CE1FFC200225EDE /* PPSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPSettingsViewController.swift; sourceTree = "<group>"; };
+		241FDC081CE203D100225EDE /* PPUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPUserDefaults.swift; sourceTree = "<group>"; };
+		242D91431CD21CBE00606576 /* PPScheduleCreatorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPScheduleCreatorController.swift; sourceTree = "<group>"; };
+		242D91481CD2252B00606576 /* PPScheduleDataSourceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPScheduleDataSourceModel.swift; sourceTree = "<group>"; };
+		242D914D1CD22C0F00606576 /* IPPSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPPSchedule.swift; sourceTree = "<group>"; };
+		242D91521CD2697A00606576 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		242D91551CD26A9C00606576 /* Schedule.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Schedule.xcdatamodel; sourceTree = "<group>"; };
+		242D915B1CD26CDA00606576 /* PPScheduleCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPScheduleCreator.swift; sourceTree = "<group>"; };
+		242D915D1CD26EEE00606576 /* ScheduleDatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleDatabaseManager.swift; sourceTree = "<group>"; };
+		242D91611CD2707700606576 /* PPScheduleEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPScheduleEditViewController.swift; sourceTree = "<group>"; };
+		242D91631CD270BE00606576 /* AddDatePickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDatePickerTableViewCell.swift; sourceTree = "<group>"; };
+		242D91641CD270BE00606576 /* AddSegmentedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSegmentedTableViewCell.swift; sourceTree = "<group>"; };
+		242D91651CD270BE00606576 /* AddTextInputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTextInputTableViewCell.swift; sourceTree = "<group>"; };
+		242D91661CD270BE00606576 /* ScheduleSimpleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleSimpleTableViewCell.swift; sourceTree = "<group>"; };
+		243DB0821CE56BA6007ACE1F /* IPPScheduleControlSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPPScheduleControlSource.swift; sourceTree = "<group>"; };
+		243DB0841CE57C61007ACE1F /* PPScheduleEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPScheduleEditController.swift; sourceTree = "<group>"; };
+		244F886E1CC9059F00ECEBE5 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		244F88701CC9061300ECEBE5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		245708691CF47BF700582CDE /* PPForceUpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPForceUpdateViewController.swift; sourceTree = "<group>"; };
+		245917B81CE30A860049FE93 /* PPSettingsSwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPSettingsSwitchTableViewCell.swift; sourceTree = "<group>"; };
+		245917BA1CE310270049FE93 /* IPPSettingDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPPSettingDetailCell.swift; sourceTree = "<group>"; };
+		24597FB41D137A38001FB93B /* PPHTTPReqeustController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPHTTPReqeustController.swift; sourceTree = "<group>"; };
 		246B409E1CC556CD00394CF3 /* PrePostApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrePostApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		246B40A11CC556CD00394CF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		246B40A31CC556CD00394CF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		246B40A61CC556CD00394CF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		246B40A91CC556CD00394CF3 /* PrePostApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PrePostApp.xcdatamodel; sourceTree = "<group>"; };
 		246B40AB1CC556CD00394CF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		246B40AE1CC556CD00394CF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		246B40B01CC556CD00394CF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		246B40B51CC556CE00394CF3 /* PrePostAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrePostAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		246B40B91CC556CE00394CF3 /* PrePostAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrePostAppTests.swift; sourceTree = "<group>"; };
 		246B40BB1CC556CE00394CF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		246B40C01CC556CE00394CF3 /* PrePostAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrePostAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		246B40C41CC556CE00394CF3 /* PrePostAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrePostAppUITests.swift; sourceTree = "<group>"; };
 		246B40C61CC556CE00394CF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		247193B21D0A562D00967481 /* String+Regular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Regular.swift"; sourceTree = "<group>"; };
+		248FC7961D191A9C005A8ED5 /* PPAnalyticsSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPAnalyticsSender.swift; sourceTree = "<group>"; };
+		24A164AB1CDC60C0001D6F86 /* PPDateConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPDateConverter.swift; sourceTree = "<group>"; };
+		24AB67DC1CE9890C003FC9D8 /* PPPushMessageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPPushMessageManager.swift; sourceTree = "<group>"; };
+		24B2B95C1D18CDEC00817025 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		24B2B95E1D18CE3400817025 /* Google-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Google-Bridging-Header.h"; sourceTree = "<group>"; };
+		24B2C9611CF813D40037CE72 /* PPSettingsCheckMarkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPSettingsCheckMarkTableViewCell.swift; sourceTree = "<group>"; };
+		24B4527F1D11688C006DC57B /* PPViewControllerMediator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPViewControllerMediator.swift; sourceTree = "<group>"; };
+		24E04EB51D17706600B79F62 /* Holiday+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Holiday+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		24E04EB61D17706600B79F62 /* Holiday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Holiday.swift; sourceTree = "<group>"; };
+		24E04EB81D17706600B79F62 /* PPPushInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PPPushInfo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		24E04EB91D17706600B79F62 /* PPPushInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPPushInfo.swift; sourceTree = "<group>"; };
+		24E04EBA1D17706600B79F62 /* PushObject+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PushObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		24E04EBB1D17706600B79F62 /* PushObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushObject.swift; sourceTree = "<group>"; };
+		24E04EC41D1770D700B79F62 /* Schedule_1_11.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule_1_11.swift; sourceTree = "<group>"; };
+		24E04EC51D1770D700B79F62 /* Schedule_1_11+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Schedule_1_11+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		24E04EC61D1770D700B79F62 /* Schedule_6_1_5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule_6_1_5.swift; sourceTree = "<group>"; };
+		24E04EC71D1770D700B79F62 /* Schedule_6_1_5+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Schedule_6_1_5+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		24E04EC81D1770D700B79F62 /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		24E04EC91D1770D700B79F62 /* Schedule+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Schedule+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		24E04ED31D17714600B79F62 /* IPPInstalment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPPInstalment.swift; sourceTree = "<group>"; };
+		24E04ED41D17714600B79F62 /* IPPInstalmentContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPPInstalmentContainer.swift; sourceTree = "<group>"; };
+		24E04ED51D17714600B79F62 /* PPInstalment+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PPInstalment+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		24E04ED61D17714600B79F62 /* PPInstalment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPInstalment.swift; sourceTree = "<group>"; };
+		24E04ED71D17714600B79F62 /* PPInstalmentContainer+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PPInstalmentContainer+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		24E04ED81D17714600B79F62 /* PPInstalmentContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPInstalmentContainer.swift; sourceTree = "<group>"; };
+		24E04EDA1D17714600B79F62 /* ScheduleDetaileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleDetaileTableViewController.swift; sourceTree = "<group>"; };
+		24F779AE1CF541D300CAC4B2 /* Holiday.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Holiday.xcdatamodel; sourceTree = "<group>"; };
+		24F779B01CF5554000CAC4B2 /* HolidayDatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HolidayDatabaseManager.swift; sourceTree = "<group>"; };
+		24F919B81D0FE5E000A1BBD0 /* PPTestContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPTestContext.swift; sourceTree = "<group>"; };
+		6D02051911F7FE51C9675686 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3CA279B1D16D97800FFB9BB /* btn_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_add.png; sourceTree = "<group>"; };
+		A3CA279C1D16D97800FFB9BB /* btn_add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_add@2x.png"; sourceTree = "<group>"; };
+		A3CA279F1D16DB6100FFB9BB /* PPThemeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPThemeColor.swift; sourceTree = "<group>"; };
+		A3CA27A11D1847D500FFB9BB /* UISwitch+TableViewCellTracing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISwitch+TableViewCellTracing.swift"; sourceTree = "<group>"; };
+		A3FB7DF91CDCE7350079AE56 /* PPMoneyFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPMoneyFormatter.swift; sourceTree = "<group>"; };
+		A3FB7E021CDE2DDF0079AE56 /* PPDetailPaymentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPDetailPaymentTableViewCell.swift; sourceTree = "<group>"; };
+		A3FB7E041CDE31B90079AE56 /* PPDetailContainerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPDetailContainerTableViewCell.swift; sourceTree = "<group>"; };
+		AC94FCC313B10FA82449E00D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E695A4E66ACE2BD02C696018 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,26 +150,60 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		246B40B21CC556CE00394CF3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		246B40BD1CC556CE00394CF3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				0FC79FD55FBA159538F005E3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EE39C09434A31A27E411C14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D02051911F7FE51C9675686 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		241FDC051CE1FF8200225EDE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				241FDC061CE1FFC200225EDE /* PPSettingsViewController.swift */,
+				241FDC081CE203D100225EDE /* PPUserDefaults.swift */,
+				245917BA1CE310270049FE93 /* IPPSettingDetailCell.swift */,
+				24AB67DC1CE9890C003FC9D8 /* PPPushMessageManager.swift */,
+				245708691CF47BF700582CDE /* PPForceUpdateViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		244F88641CC9035A00ECEBE5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				244F886B1CC9057600ECEBE5 /* Database */,
+				24E04EB41D17706600B79F62 /* Holiday */,
+				242D91521CD2697A00606576 /* MainViewController.swift */,
+				24B4527F1D11688C006DC57B /* PPViewControllerMediator.swift */,
+				24E04EB71D17706600B79F62 /* Push */,
+				249F835E1CC92DB700CD55FD /* Schedule */,
+				241FDC051CE1FF8200225EDE /* Settings */,
+				24A164AA1CDC6097001D6F86 /* Utils */,
+				24C9B0C21CCB354C00EB2BBD /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		244F886B1CC9057600ECEBE5 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				242D91541CD26A9C00606576 /* Schedule.xcdatamodeld */,
+				24F779AD1CF541D300CAC4B2 /* Holiday.xcdatamodeld */,
+				242D915D1CD26EEE00606576 /* ScheduleDatabaseManager.swift */,
+				24F779B01CF5554000CAC4B2 /* HolidayDatabaseManager.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		246B40951CC556CD00394CF3 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +211,10 @@
 				246B40B81CC556CE00394CF3 /* PrePostAppTests */,
 				246B40C31CC556CE00394CF3 /* PrePostAppUITests */,
 				246B409F1CC556CD00394CF3 /* Products */,
+				244F88701CC9061300ECEBE5 /* CoreData.framework */,
+				244F886E1CC9059F00ECEBE5 /* libsqlite3.0.tbd */,
+				EC7FA180A69B354375418D40 /* Pods */,
+				1EE39C09434A31A27E411C14 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,8 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				246B409E1CC556CD00394CF3 /* PrePostApp.app */,
-				246B40B51CC556CE00394CF3 /* PrePostAppTests.xctest */,
-				246B40C01CC556CE00394CF3 /* PrePostAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,12 +230,15 @@
 			isa = PBXGroup;
 			children = (
 				246B40A11CC556CD00394CF3 /* AppDelegate.swift */,
-				246B40A31CC556CD00394CF3 /* ViewController.swift */,
+				24F919B81D0FE5E000A1BBD0 /* PPTestContext.swift */,
+				244F88641CC9035A00ECEBE5 /* Classes */,
 				246B40A51CC556CD00394CF3 /* Main.storyboard */,
 				246B40AB1CC556CD00394CF3 /* Assets.xcassets */,
 				246B40AD1CC556CD00394CF3 /* LaunchScreen.storyboard */,
+				A3CA27991D16D97800FFB9BB /* Resources */,
 				246B40B01CC556CD00394CF3 /* Info.plist */,
-				246B40A81CC556CD00394CF3 /* PrePostApp.xcdatamodeld */,
+				24B2B95C1D18CDEC00817025 /* GoogleService-Info.plist */,
+				24B2B95E1D18CE3400817025 /* Google-Bridging-Header.h */,
 			);
 			path = PrePostApp;
 			sourceTree = "<group>";
@@ -128,6 +261,132 @@
 			path = PrePostAppUITests;
 			sourceTree = "<group>";
 		};
+		249F835E1CC92DB700CD55FD /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				242D914D1CD22C0F00606576 /* IPPSchedule.swift */,
+				243DB0821CE56BA6007ACE1F /* IPPScheduleControlSource.swift */,
+				242D915B1CD26CDA00606576 /* PPScheduleCreator.swift */,
+				242D91431CD21CBE00606576 /* PPScheduleCreatorController.swift */,
+				242D91481CD2252B00606576 /* PPScheduleDataSourceModel.swift */,
+				243DB0841CE57C61007ACE1F /* PPScheduleEditController.swift */,
+				242D91611CD2707700606576 /* PPScheduleEditViewController.swift */,
+				24E04EC41D1770D700B79F62 /* Schedule_1_11.swift */,
+				24E04EC51D1770D700B79F62 /* Schedule_1_11+CoreDataProperties.swift */,
+				24E04EC61D1770D700B79F62 /* Schedule_6_1_5.swift */,
+				24E04EC71D1770D700B79F62 /* Schedule_6_1_5+CoreDataProperties.swift */,
+				24E04EC81D1770D700B79F62 /* Schedule.swift */,
+				24E04EC91D1770D700B79F62 /* Schedule+CoreDataProperties.swift */,
+				24E04ED21D17714600B79F62 /* Instalment */,
+				24E04ED91D17714600B79F62 /* ViewController */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		24A164AA1CDC6097001D6F86 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				24A164AB1CDC60C0001D6F86 /* PPDateConverter.swift */,
+				A3FB7DF91CDCE7350079AE56 /* PPMoneyFormatter.swift */,
+				247193B21D0A562D00967481 /* String+Regular.swift */,
+				24597FB41D137A38001FB93B /* PPHTTPReqeustController.swift */,
+				A3CA279F1D16DB6100FFB9BB /* PPThemeColor.swift */,
+				A3CA27A11D1847D500FFB9BB /* UISwitch+TableViewCellTracing.swift */,
+				248FC7961D191A9C005A8ED5 /* PPAnalyticsSender.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		24C9B0C21CCB354C00EB2BBD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				24C9B0C31CCB354C00EB2BBD /* TableViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		24C9B0C31CCB354C00EB2BBD /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				242D91631CD270BE00606576 /* AddDatePickerTableViewCell.swift */,
+				242D91641CD270BE00606576 /* AddSegmentedTableViewCell.swift */,
+				242D91651CD270BE00606576 /* AddTextInputTableViewCell.swift */,
+				242D91661CD270BE00606576 /* ScheduleSimpleTableViewCell.swift */,
+				A3FB7E021CDE2DDF0079AE56 /* PPDetailPaymentTableViewCell.swift */,
+				A3FB7E041CDE31B90079AE56 /* PPDetailContainerTableViewCell.swift */,
+				245917B81CE30A860049FE93 /* PPSettingsSwitchTableViewCell.swift */,
+				24B2C9611CF813D40037CE72 /* PPSettingsCheckMarkTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		24E04EB41D17706600B79F62 /* Holiday */ = {
+			isa = PBXGroup;
+			children = (
+				24E04EB51D17706600B79F62 /* Holiday+CoreDataProperties.swift */,
+				24E04EB61D17706600B79F62 /* Holiday.swift */,
+			);
+			path = Holiday;
+			sourceTree = "<group>";
+		};
+		24E04EB71D17706600B79F62 /* Push */ = {
+			isa = PBXGroup;
+			children = (
+				24E04EB81D17706600B79F62 /* PPPushInfo+CoreDataProperties.swift */,
+				24E04EB91D17706600B79F62 /* PPPushInfo.swift */,
+				24E04EBA1D17706600B79F62 /* PushObject+CoreDataProperties.swift */,
+				24E04EBB1D17706600B79F62 /* PushObject.swift */,
+			);
+			path = Push;
+			sourceTree = "<group>";
+		};
+		24E04ED21D17714600B79F62 /* Instalment */ = {
+			isa = PBXGroup;
+			children = (
+				24E04ED31D17714600B79F62 /* IPPInstalment.swift */,
+				24E04ED41D17714600B79F62 /* IPPInstalmentContainer.swift */,
+				24E04ED51D17714600B79F62 /* PPInstalment+CoreDataProperties.swift */,
+				24E04ED61D17714600B79F62 /* PPInstalment.swift */,
+				24E04ED71D17714600B79F62 /* PPInstalmentContainer+CoreDataProperties.swift */,
+				24E04ED81D17714600B79F62 /* PPInstalmentContainer.swift */,
+			);
+			path = Instalment;
+			sourceTree = "<group>";
+		};
+		24E04ED91D17714600B79F62 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				24E04EDA1D17714600B79F62 /* ScheduleDetaileTableViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A3CA27991D16D97800FFB9BB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A3CA279A1D16D97800FFB9BB /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A3CA279A1D16D97800FFB9BB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A3CA279B1D16D97800FFB9BB /* btn_add.png */,
+				A3CA279C1D16D97800FFB9BB /* btn_add@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		EC7FA180A69B354375418D40 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E695A4E66ACE2BD02C696018 /* Pods.debug.xcconfig */,
+				AC94FCC313B10FA82449E00D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +394,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 246B40C91CC556CE00394CF3 /* Build configuration list for PBXNativeTarget "PrePostApp" */;
 			buildPhases = (
+				A25FA3C9423DB0A1012757BB /* Check Pods Manifest.lock */,
 				246B409A1CC556CD00394CF3 /* Sources */,
 				246B409B1CC556CD00394CF3 /* Frameworks */,
 				246B409C1CC556CD00394CF3 /* Resources */,
+				17864A3A7FC56887ABD0C656 /* Embed Pods Frameworks */,
+				150625BCD0B63DDD6147DCF7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -147,42 +409,6 @@
 			productName = PrePostApp;
 			productReference = 246B409E1CC556CD00394CF3 /* PrePostApp.app */;
 			productType = "com.apple.product-type.application";
-		};
-		246B40B41CC556CE00394CF3 /* PrePostAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 246B40CC1CC556CE00394CF3 /* Build configuration list for PBXNativeTarget "PrePostAppTests" */;
-			buildPhases = (
-				246B40B11CC556CE00394CF3 /* Sources */,
-				246B40B21CC556CE00394CF3 /* Frameworks */,
-				246B40B31CC556CE00394CF3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				246B40B71CC556CE00394CF3 /* PBXTargetDependency */,
-			);
-			name = PrePostAppTests;
-			productName = PrePostAppTests;
-			productReference = 246B40B51CC556CE00394CF3 /* PrePostAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		246B40BF1CC556CE00394CF3 /* PrePostAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 246B40CF1CC556CE00394CF3 /* Build configuration list for PBXNativeTarget "PrePostAppUITests" */;
-			buildPhases = (
-				246B40BC1CC556CE00394CF3 /* Sources */,
-				246B40BD1CC556CE00394CF3 /* Frameworks */,
-				246B40BE1CC556CE00394CF3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				246B40C21CC556CE00394CF3 /* PBXTargetDependency */,
-			);
-			name = PrePostAppUITests;
-			productName = PrePostAppUITests;
-			productReference = 246B40C01CC556CE00394CF3 /* PrePostAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -196,14 +422,6 @@
 				TargetAttributes = {
 					246B409D1CC556CD00394CF3 = {
 						CreatedOnToolsVersion = 7.3;
-					};
-					246B40B41CC556CE00394CF3 = {
-						CreatedOnToolsVersion = 7.3;
-						TestTargetID = 246B409D1CC556CD00394CF3;
-					};
-					246B40BF1CC556CE00394CF3 = {
-						CreatedOnToolsVersion = 7.3;
-						TestTargetID = 246B409D1CC556CD00394CF3;
 					};
 				};
 			};
@@ -221,8 +439,6 @@
 			projectRoot = "";
 			targets = (
 				246B409D1CC556CD00394CF3 /* PrePostApp */,
-				246B40B41CC556CE00394CF3 /* PrePostAppTests */,
-				246B40BF1CC556CE00394CF3 /* PrePostAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -234,67 +450,126 @@
 			files = (
 				246B40AF1CC556CD00394CF3 /* LaunchScreen.storyboard in Resources */,
 				246B40AC1CC556CD00394CF3 /* Assets.xcassets in Resources */,
+				A3CA279D1D16D97800FFB9BB /* btn_add.png in Resources */,
 				246B40A71CC556CD00394CF3 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		246B40B31CC556CE00394CF3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		246B40BE1CC556CE00394CF3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				A3CA279E1D16D97800FFB9BB /* btn_add@2x.png in Resources */,
+				24B2B95D1D18CDEC00817025 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		150625BCD0B63DDD6147DCF7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		17864A3A7FC56887ABD0C656 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A25FA3C9423DB0A1012757BB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		246B409A1CC556CD00394CF3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				246B40A41CC556CD00394CF3 /* ViewController.swift in Sources */,
 				246B40A21CC556CD00394CF3 /* AppDelegate.swift in Sources */,
-				246B40AA1CC556CD00394CF3 /* PrePostApp.xcdatamodeld in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		246B40B11CC556CE00394CF3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				246B40BA1CC556CE00394CF3 /* PrePostAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		246B40BC1CC556CE00394CF3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				246B40C51CC556CE00394CF3 /* PrePostAppUITests.swift in Sources */,
+				242D91691CD270BE00606576 /* AddTextInputTableViewCell.swift in Sources */,
+				242D916A1CD270BE00606576 /* ScheduleSimpleTableViewCell.swift in Sources */,
+				243DB0831CE56BA6007ACE1F /* IPPScheduleControlSource.swift in Sources */,
+				24B2C9621CF813D40037CE72 /* PPSettingsCheckMarkTableViewCell.swift in Sources */,
+				242D91441CD21CBE00606576 /* PPScheduleCreatorController.swift in Sources */,
+				A3CA27A21D1847D500FFB9BB /* UISwitch+TableViewCellTracing.swift in Sources */,
+				242D91671CD270BE00606576 /* AddDatePickerTableViewCell.swift in Sources */,
+				242D91681CD270BE00606576 /* AddSegmentedTableViewCell.swift in Sources */,
+				248FC7971D191A9C005A8ED5 /* PPAnalyticsSender.swift in Sources */,
+				24E04ECC1D1770D700B79F62 /* Schedule_1_11.swift in Sources */,
+				24E04ECD1D1770D700B79F62 /* Schedule_1_11+CoreDataProperties.swift in Sources */,
+				24A164AC1CDC60C0001D6F86 /* PPDateConverter.swift in Sources */,
+				24F779AF1CF541D300CAC4B2 /* Holiday.xcdatamodeld in Sources */,
+				24F779B11CF5554000CAC4B2 /* HolidayDatabaseManager.swift in Sources */,
+				24F919B91D0FE5E000A1BBD0 /* PPTestContext.swift in Sources */,
+				241FDC091CE203D100225EDE /* PPUserDefaults.swift in Sources */,
+				2457086A1CF47BF700582CDE /* PPForceUpdateViewController.swift in Sources */,
+				24E04ECE1D1770D700B79F62 /* Schedule_6_1_5.swift in Sources */,
+				24597FB51D137A38001FB93B /* PPHTTPReqeustController.swift in Sources */,
+				24E04EDF1D17714600B79F62 /* PPInstalmentContainer+CoreDataProperties.swift in Sources */,
+				242D915C1CD26CDA00606576 /* PPScheduleCreator.swift in Sources */,
+				242D914E1CD22C0F00606576 /* IPPSchedule.swift in Sources */,
+				245917BB1CE310270049FE93 /* IPPSettingDetailCell.swift in Sources */,
+				247193B31D0A562D00967481 /* String+Regular.swift in Sources */,
+				24E04EE11D17714600B79F62 /* ScheduleDetaileTableViewController.swift in Sources */,
+				24E04EDB1D17714600B79F62 /* IPPInstalment.swift in Sources */,
+				24E04EC01D17706600B79F62 /* PushObject+CoreDataProperties.swift in Sources */,
+				A3FB7E031CDE2DDF0079AE56 /* PPDetailPaymentTableViewCell.swift in Sources */,
+				24E04EC11D17706600B79F62 /* PushObject.swift in Sources */,
+				24E04EDD1D17714600B79F62 /* PPInstalment+CoreDataProperties.swift in Sources */,
+				24E04EDC1D17714600B79F62 /* IPPInstalmentContainer.swift in Sources */,
+				24E04EBE1D17706600B79F62 /* PPPushInfo+CoreDataProperties.swift in Sources */,
+				A3FB7DFA1CDCE7350079AE56 /* PPMoneyFormatter.swift in Sources */,
+				24E04EBD1D17706600B79F62 /* Holiday.swift in Sources */,
+				A3FB7E051CDE31B90079AE56 /* PPDetailContainerTableViewCell.swift in Sources */,
+				A3CA27A01D16DB6100FFB9BB /* PPThemeColor.swift in Sources */,
+				24E04ED01D1770D700B79F62 /* Schedule.swift in Sources */,
+				24E04EBC1D17706600B79F62 /* Holiday+CoreDataProperties.swift in Sources */,
+				241FDC071CE1FFC200225EDE /* PPSettingsViewController.swift in Sources */,
+				242D91491CD2252B00606576 /* PPScheduleDataSourceModel.swift in Sources */,
+				24E04ED11D1770D700B79F62 /* Schedule+CoreDataProperties.swift in Sources */,
+				243DB0851CE57C61007ACE1F /* PPScheduleEditController.swift in Sources */,
+				242D91561CD26A9C00606576 /* Schedule.xcdatamodeld in Sources */,
+				24E04EE01D17714600B79F62 /* PPInstalmentContainer.swift in Sources */,
+				24E04ECF1D1770D700B79F62 /* Schedule_6_1_5+CoreDataProperties.swift in Sources */,
+				24E04EDE1D17714600B79F62 /* PPInstalment.swift in Sources */,
+				24E04EBF1D17706600B79F62 /* PPPushInfo.swift in Sources */,
+				242D91531CD2697A00606576 /* MainViewController.swift in Sources */,
+				24B452801D11688C006DC57B /* PPViewControllerMediator.swift in Sources */,
+				242D91621CD2707700606576 /* PPScheduleEditViewController.swift in Sources */,
+				242D915E1CD26EEE00606576 /* ScheduleDatabaseManager.swift in Sources */,
+				245917B91CE30A860049FE93 /* PPSettingsSwitchTableViewCell.swift in Sources */,
+				24AB67DD1CE9890C003FC9D8 /* PPPushMessageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		246B40B71CC556CE00394CF3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 246B409D1CC556CD00394CF3 /* PrePostApp */;
-			targetProxy = 246B40B61CC556CE00394CF3 /* PBXContainerItemProxy */;
-		};
-		246B40C21CC556CE00394CF3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 246B409D1CC556CD00394CF3 /* PrePostApp */;
-			targetProxy = 246B40C11CC556CE00394CF3 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		246B40A51CC556CD00394CF3 /* Main.storyboard */ = {
@@ -353,7 +628,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = "";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -393,7 +669,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -403,69 +680,40 @@
 		};
 		246B40CA1CC556CE00394CF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E695A4E66ACE2BD02C696018 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PrePostApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = NO;
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.artcow.PrePostApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "./PrePostApp/Google-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		246B40CB1CC556CE00394CF3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC94FCC313B10FA82449E00D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PrePostApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.artcow.PrePostApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		246B40CD1CC556CE00394CF3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = PrePostAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.artcow.PrePostAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrePostApp.app/PrePostApp";
-			};
-			name = Debug;
-		};
-		246B40CE1CC556CE00394CF3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = PrePostAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.artcow.PrePostAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrePostApp.app/PrePostApp";
-			};
-			name = Release;
-		};
-		246B40D01CC556CE00394CF3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = PrePostAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.artcow.PrePostAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = PrePostApp;
-			};
-			name = Debug;
-		};
-		246B40D11CC556CE00394CF3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = PrePostAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.artcow.PrePostAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = PrePostApp;
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "./PrePostApp/Google-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -488,33 +736,28 @@
 				246B40CB1CC556CE00394CF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		246B40CC1CC556CE00394CF3 /* Build configuration list for PBXNativeTarget "PrePostAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				246B40CD1CC556CE00394CF3 /* Debug */,
-				246B40CE1CC556CE00394CF3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		246B40CF1CC556CE00394CF3 /* Build configuration list for PBXNativeTarget "PrePostAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				246B40D01CC556CE00394CF3 /* Debug */,
-				246B40D11CC556CE00394CF3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		246B40A81CC556CD00394CF3 /* PrePostApp.xcdatamodeld */ = {
+		242D91541CD26A9C00606576 /* Schedule.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				246B40A91CC556CD00394CF3 /* PrePostApp.xcdatamodel */,
+				242D91551CD26A9C00606576 /* Schedule.xcdatamodel */,
 			);
-			currentVersion = 246B40A91CC556CD00394CF3 /* PrePostApp.xcdatamodel */;
-			path = PrePostApp.xcdatamodeld;
+			currentVersion = 242D91551CD26A9C00606576 /* Schedule.xcdatamodel */;
+			path = Schedule.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		24F779AD1CF541D300CAC4B2 /* Holiday.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				24F779AE1CF541D300CAC4B2 /* Holiday.xcdatamodel */,
+			);
+			currentVersion = 24F779AE1CF541D300CAC4B2 /* Holiday.xcdatamodel */;
+			path = Holiday.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

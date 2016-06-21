@@ -13,11 +13,58 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        setThemeColor()
+        #if DEBUG
+            let _ = PPTestContext()
+        #endif
+        
+        dispatch_async(dispatch_get_main_queue()){
+            self.networkDataRequest()
+        }
         return true
+    }
+    
+    func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
+        if shortcutItem.type == "com.artcow.prepost.add-schedule" {
+            PPAnalyticsSender.sendName("3d 터치 새 스케쥴")
+            let res = PPViewControllerMediator.sharedInstance().isAddScheduleViewcontroller()
+            if res.0 == true {
+                let alert = UIAlertController(title: "알림", message: "이미 작성 중인 항목이 있습니다.\n기존의 내용을 지우고 새로 작성하시겠습니까?", preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "새로 작성", style: .Default, handler: {(alert) in
+                    res.1?.clear()
+                }))
+                alert.addAction(UIAlertAction(title: "이어서 작성", style: .Cancel, handler: nil))
+                res.1!.presentViewController(alert, animated: true, completion: nil)
+            } else {
+                let rootViewController = self.window?.rootViewController as? UINavigationController
+                
+                if let mainViewController = rootViewController?.childViewControllers[0] as? MainViewController {
+                    if (mainViewController.presentedViewController != nil) {
+                        // 이미 실행 중일 경우
+                        mainViewController.presentedViewController?.dismissViewControllerAnimated(false, completion: {() in
+                            self.showAddViewController(mainViewController)
+                        })
+                    } else {
+                        // 실행 중이 아님.
+                        self.showAddViewController(mainViewController)
+                    }
+                }
+            }
+            completionHandler(true)
+        }
+        completionHandler(false)
+    }
+    
+    
+    func showAddViewController(mainViewController: UIViewController) {
+        dispatch_async(dispatch_get_main_queue()){
+            mainViewController.navigationController?.popToRootViewControllerAnimated(false)
+            mainViewController.performSegueWithIdentifier("AddViewSegue", sender: nil)
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -32,6 +79,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        if PPPushMessageManager.notificationEnabled {
+            ScheduleDatabaseManager.sharedInstance().registerPushObjectIfExistPending()
+        }
+        networkDataRequest()
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
@@ -41,71 +92,141 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        self.saveContext()
+        ScheduleDatabaseManager.sharedInstance().saveContext()
+    }
+    
+    // MARK: - color set 
+    
+    private func setThemeColor() {
+        UINavigationBar.appearance().barTintColor = PPThemeColor.defaultThemeColor()
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+
+        UISwitch.appearance().tintColor = PPThemeColor.defaultThemeColor().colorWithAlphaComponent(0.4)
+        UISwitch.appearance().onTintColor = PPThemeColor.defaultThemeColor()
+        UISegmentedControl.appearance().tintColor = PPThemeColor.defaultThemeColor()
+        UITableViewCell.appearance().tintColor = PPThemeColor.defaultThemeColor()
+        
     }
 
-    // MARK: - Core Data stack
+    // MARK: - Notifications 
+    
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+    }
+    
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
+        //handle your notification's action
+    }
+    
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], withResponseInfo responseInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
+        //handle your notification's action response info
+    }
+    
+    // MARK: - network
+    var updateCount: Int = 0
+    var hasChanged: Bool = false
+    
+//    private
+    func networkDataRequest() {
+        updateCount = 0
+        
+        if PPHTTPReqeustController.enabledReqeust() {
+            PPHTTPReqeustController().hasNewDataReqeust({(res) in
+                self.hasChanged = false
+                
+                if let res = res {
+                    let def = PPUserDefaults.sharedInstance()
+                    
+                    if def.isForceUpdateVersion(res.forceUpdateVersion!) {
+                        // 업데이트를 해야 합니다.
+                        def.disabledApplication = true
+                        self.window?.rootViewController?.presentViewController(PPViewControllerMediator.sharedInstance().forceUpdateViewController(), animated: true, completion: nil)
+                        return
+                    }
+                    
+                    // 새로운 데이터가 있습니다.
+                    if def.hasNewDataForH(res.hDate!) == false {
+                        self.updateCount += 1
+                        PPHTTPReqeustController().getHDate({(container) in
+                            def.lastUpdateDateH = res.hDate!
+                            self.insertOrUpdateHoliday(container)
+                            
+                        })
+                    }
+                    if def.hasNewDataForI(res.iDate!) {
+                        self.updateCount += 1
+                        PPHTTPReqeustController().getIDate({(container) in
+                        def.lastUpdateDateI = res.iDate!
+                        self.insertOrUpdateHoliday(container)
 
-    lazy var applicationDocumentsDirectory: NSURL = {
-        // The directory the application uses to store the Core Data store file. This code uses a directory named "com.artcow.PrePostApp" in the application's documents Application Support directory.
-        let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        return urls[urls.count-1]
-    }()
-
-    lazy var managedObjectModel: NSManagedObjectModel = {
-        // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-        let modelURL = NSBundle.mainBundle().URLForResource("PrePostApp", withExtension: "momd")!
-        return NSManagedObjectModel(contentsOfURL: modelURL)!
-    }()
-
-    lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
-        // The persistent store coordinator for the application. This implementation creates and returns a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
-        // Create the coordinator and store
-        let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-        let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("SingleViewCoreData.sqlite")
-        var failureReason = "There was an error creating or loading the application's saved data."
-        do {
-            try coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
-        } catch {
-            // Report any error we got.
-            var dict = [String: AnyObject]()
-            dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
-            dict[NSLocalizedFailureReasonErrorKey] = failureReason
-
-            dict[NSUnderlyingErrorKey] = error as NSError
-            let wrappedError = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
-            // Replace this with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog("Unresolved error \(wrappedError), \(wrappedError.userInfo)")
-            abort()
+                        })
+                    }
+                }
+            })
+        }
+    }
+    
+    private func insertOrUpdateHoliday(container: PPDTOHoliDayContainer?) {
+        let database = HolidayDatabaseManager.sharedInstance
+        if var newingData = container?.dates {
+            let existingData = database.holidayForDate(container!.type)
+            if existingData?.count != 0 {
+                for new in newingData {
+                    for exist in existingData! {
+                        if exist.isEqualDay(new) {
+                            exist.readedFlag = true
+                            newingData.removeAtIndex(newingData.indexOf(new)!)
+                        }
+                    }
+                }
+            }
+            
+            let scheduleDatabase = ScheduleDatabaseManager.sharedInstance()
+            
+            // 이전에는 휴일이었으나 갑자기 없어진 경우 (2005년 식목일 같은)
+            for exist in existingData! {
+                if exist.readedFlag == false {
+                    database.deleteHoliday(exist)
+                    if let containers = scheduleDatabase.allHolidayContainers() {
+                        for contain in containers {
+                            if exist.isEqualDay(contain) {
+                                contain.createOrDeletePushInfoIfNeeds()
+                                // 같은 날짜의 container 는 여러개 있을 수 있기 때문에 별도로 break 를 쓰지 않는다.
+                                hasChanged = true
+                            }
+                        }
+                    }
+                }
+            }
+            
+            // 기존에 없던 데이터는 추가 해준다.
+            for new in newingData {
+                let holiday = database.insertHoliday(new)
+                if let containers = scheduleDatabase.allNonHolidayContainers() {
+                    for contain in containers {
+                        if holiday.isEqualDay(contain) {
+                            contain.createOrDeletePushInfoIfNeeds()
+                            hasChanged = true
+                        }
+                    }
+                }
+            }
+//            database.saveContext()
         }
         
-        return coordinator
-    }()
-
-    lazy var managedObjectContext: NSManagedObjectContext = {
-        // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) This property is optional since there are legitimate error conditions that could cause the creation of the context to fail.
-        let coordinator = self.persistentStoreCoordinator
-        var managedObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
-        managedObjectContext.persistentStoreCoordinator = coordinator
-        return managedObjectContext
-    }()
-
-    // MARK: - Core Data Saving support
-
-    func saveContext () {
-        if managedObjectContext.hasChanges {
-            do {
-                try managedObjectContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nserror = error as NSError
-                NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-                abort()
+        updateCount -= 1
+        // 공휴일 정보가 동시에 업데이트 되는 경우 한번에 처리 하기 위해서 별도의 플래그를 두고 초기화 시켜주는 방식으로 처리.
+        if updateCount == 0 {
+            // 새롭게 적용된 항목이 있어서 기존 납입일에 영향을 받는 경우 얼럿을 띄워 줘야 한다.
+            if hasChanged {
+                let alertView = UIAlertController(title: "휴일 정보 업데이트", message: "일부 일정에 영향을 미치는 새로운 휴일 정보로 업데이트 되었습니다.", preferredStyle: .Alert)
+                alertView.addAction(UIAlertAction(title: "확인", style: .Default, handler: {(alert) in
+                
+                }))
+                window?.rootViewController?.presentViewController(alertView, animated: true, completion: nil)
             }
         }
     }
-
 }
 
